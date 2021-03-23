@@ -24,11 +24,23 @@ From the Palmer Penguins site, there were two datasets that could be explored. T
 
 ## Methods
 
-- Data was taken from a website called "Palmer Penguins", which contains information about penguins on islands in Antartica
+
+### Data Acquisition 
+
+- Data was taken from a website called "Palmer Penguins", which contains information about penguins on islands in Antartica 
+```{r}
+citation("palmerpenguins")
+```
+
 - From the two datasets on the website, the penguins data is what was used
 - The packages of tidyverse and palmerpenguins were then installed and the data was read into RStudio
-- A few graphs were then created for visual aid to look closer and to compare the data from the penguins
 
+### Data Preparation
+
+- The data was renamed to penguins_data for easier usage and manipulation
+- A few graphs were then created for visual aid to look closer and to compare the data from the penguins
+- Five graphs were created, including four scatterplots and one boxplot. 
+- From there it is simple to visualize some trends in the graph and compare the size measurements of penguins and what island they live on.
 
 ## Results
 
@@ -81,3 +93,13 @@ flipper_boxplot
 
 
 ## Discussion
+
+
+## Literature Cited
+
+```{r}
+citation("palmerpenguins")
+```
+
+
+## References
