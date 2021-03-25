@@ -2,7 +2,7 @@ Relationship Between Size Measurements of Penguins and the Island That
 They Live On
 ================
 Amara Miller
-2021-03-23
+2021-03-25
 
 ## Install Packages and Read Data
 
@@ -72,47 +72,26 @@ correlation.
 ### Data Acquisition
 
   - Data was taken from a website called “Palmer Penguins”, which
-    contains information about penguins on islands in Antartica
-
-<!-- end list -->
-
-``` r
-citation("palmerpenguins")
-```
-
-    ## 
-    ## To cite palmerpenguins in publications use:
-    ## 
-    ##   Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer
-    ##   Archipelago (Antarctica) penguin data. R package version 0.1.0.
-    ##   https://allisonhorst.github.io/palmerpenguins/
-    ## 
-    ## A BibTeX entry for LaTeX users is
-    ## 
-    ##   @Manual{,
-    ##     title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data},
-    ##     author = {Allison Marie Horst and Alison Presmanes Hill and Kristen B Gorman},
-    ##     year = {2020},
-    ##     note = {R package version 0.1.0},
-    ##     url = {https://allisonhorst.github.io/palmerpenguins/},
-    ##   }
-
+    contains information about penguins on islands in Antartica (Horst
+    et all, 2020).
   - From the two datasets on the website, the penguins data is what was
-    used
+    used.
   - The packages of tidyverse and palmerpenguins were then installed and
-    the data was read into RStudio
+    the data was read into RStudio (RStudio, 2020), using the readr
+    package (Hadley and Jim, 2020).
 
 ### Data Preparation
 
   - The data was renamed to penguins\_data for easier usage and
-    manipulation
+    manipulation, using the dyplr package in RStudio (Hadley et all,
+    2020)
   - A few graphs were then created for visual aid to look closer and to
     compare the data from the penguins
   - Five graphs were created, including four scatterplots and one
-    boxplot.
+    boxplot using the ggplot2 package in RStudio (H. Wickham, 2016)
   - From there it is simple to visualize some trends in the graph and
     compare the size measurements of penguins and what island they live
-    on.
+    on
 
 ## Results
 
@@ -127,7 +106,7 @@ length_and_depth
 
     ## Warning: Removed 2 rows containing missing values (geom_point).
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 I next added best fit lines to get a better view of what the trend
 actually is in each island.
@@ -148,7 +127,7 @@ length_and_depthline
 
     ## Warning: Removed 2 rows containing missing values (geom_point).
 
-![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 For another comparison, I looked at the trend between flipper length and
 body mass of the penguins and what island they lived on.
@@ -161,7 +140,7 @@ flipper_and_mass
 
     ## Warning: Removed 2 rows containing missing values (geom_point).
 
-![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 I again added best fit lines to this graph also.
 
@@ -181,7 +160,7 @@ flipper_and_massline
 
     ## Warning: Removed 2 rows containing missing values (geom_point).
 
-![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 I also wanted to compare just one numerical variable of flipper length
 of the penguins to what island that they lived on, so I created a
@@ -197,31 +176,25 @@ flipper_boxplot
 
     ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
 
-![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ## Discussion
 
 ## Literature Cited
 
-``` r
-citation("palmerpenguins")
-```
+Hadley Wickham and Jim Hester (2020). readr: Read Rectangular Text Data.
+R package version 1.4.0. <https://CRAN.R-project.org/package=readr>
 
-    ## 
-    ## To cite palmerpenguins in publications use:
-    ## 
-    ##   Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer
-    ##   Archipelago (Antarctica) penguin data. R package version 0.1.0.
-    ##   https://allisonhorst.github.io/palmerpenguins/
-    ## 
-    ## A BibTeX entry for LaTeX users is
-    ## 
-    ##   @Manual{,
-    ##     title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data},
-    ##     author = {Allison Marie Horst and Alison Presmanes Hill and Kristen B Gorman},
-    ##     year = {2020},
-    ##     note = {R package version 0.1.0},
-    ##     url = {https://allisonhorst.github.io/palmerpenguins/},
-    ##   }
+Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020).
+dplyr: A Grammar of Data Manipulation. R package version 1.0.2.
+<https://CRAN.R-project.org/package=dplyr>
 
-## References
+Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago
+(Antarctica) penguin data. R package version 0.1.0.
+<https://allisonhorst.github.io/palmerpenguins/>
+
+H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
+New York, 2016.
+
+RStudio Team (2020). RStudio: Integrated Development Environment for R.
+RStudio, PBC, Boston, MA URL <http://www.rstudio.com/>.
