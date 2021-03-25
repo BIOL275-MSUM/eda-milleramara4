@@ -42,3 +42,12 @@ flipper_boxplot <- ggplot(penguins, aes(x=island, y=flipper_length_mm, color = i
   geom_boxplot(notch=FALSE, outlier.colour="cadetblue3", outlier.shape=8,
                outlier.size=4)
 flipper_boxplot
+
+
+# Literature cited --------------------------------------------------------
+
+citation("palmerpenguins")
+citation("ggplot2")
+citation("dplyr")
+RStudio.Version()
+citation("readr")

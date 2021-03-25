@@ -27,20 +27,16 @@ From the Palmer Penguins site, there were two datasets that could be explored. T
 
 ### Data Acquisition 
 
-- Data was taken from a website called "Palmer Penguins", which contains information about penguins on islands in Antartica 
-```{r}
-citation("palmerpenguins")
-```
-
-- From the two datasets on the website, the penguins data is what was used
-- The packages of tidyverse and palmerpenguins were then installed and the data was read into RStudio
+- Data was taken from a website called "Palmer Penguins", which contains information about penguins on islands in Antartica (Horst et all, 2020).
+- From the two datasets on the website, the penguins data is what was used.
+- The packages of tidyverse and palmerpenguins were then installed and the data was read into RStudio (RStudio, 2020), using the readr package (Hadley and Jim, 2020).
 
 ### Data Preparation
 
-- The data was renamed to penguins_data for easier usage and manipulation
+- The data was renamed to penguins_data for easier usage and manipulation, using the dyplr package in RStudio (Hadley et all, 2020)
 - A few graphs were then created for visual aid to look closer and to compare the data from the penguins
-- Five graphs were created, including four scatterplots and one boxplot. 
-- From there it is simple to visualize some trends in the graph and compare the size measurements of penguins and what island they live on.
+- Five graphs were created, including four scatterplots and one boxplot using the ggplot2 package in RStudio (H. Wickham, 2016)
+- From there it is simple to visualize some trends in the graph and compare the size measurements of penguins and what island they live on
 
 ## Results
 
@@ -97,9 +93,19 @@ flipper_boxplot
 
 ## Literature Cited
 
-```{r}
-citation("palmerpenguins")
-```
+  Hadley Wickham and Jim Hester (2020). readr: Read Rectangular Text Data. R
+   package version 1.4.0. https://CRAN.R-project.org/package=readr
 
-
-## References
+  Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020). dplyr: A
+   Grammar of Data Manipulation. R package version 1.0.2.
+   https://CRAN.R-project.org/package=dplyr
+  
+  Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago
+   (Antarctica) penguin data. R package version 0.1.0.
+   https://allisonhorst.github.io/palmerpenguins/
+  
+  H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New
+    York, 2016.
+  
+  RStudio Team (2020). RStudio: Integrated Development Environment for R. RStudio,
+    PBC, Boston, MA URL http://www.rstudio.com/.
