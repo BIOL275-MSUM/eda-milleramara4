@@ -2,7 +2,7 @@ Relationship Between Size Measurements of Penguins and the Island That
 They Live On
 ================
 Amara Miller
-2021-03-25
+2021-03-30
 
 ## Install Packages and Read Data
 
@@ -76,6 +76,8 @@ correlation.
     et all, 2020).
   - From the two datasets on the website, the penguins data is what was
     used.
+  - There were exact instructions on the palmer penguins website for how
+    to download the package and the correct code to use.
   - The packages of tidyverse and palmerpenguins were then installed and
     the data was read into RStudio (RStudio, 2020), using the readr
     package (Hadley and Jim, 2020).
@@ -84,14 +86,14 @@ correlation.
 
   - The data was renamed to penguins\_data for easier usage and
     manipulation, using the dyplr package in RStudio (Hadley et all,
-    2020)
+    2020).
   - A few graphs were then created for visual aid to look closer and to
-    compare the data from the penguins
+    compare the data from the penguins.
   - Five graphs were created, including four scatterplots and one
-    boxplot using the ggplot2 package in RStudio (H. Wickham, 2016)
+    boxplot using the ggplot2 package in RStudio (H. Wickham, 2016).
   - From there it is simple to visualize some trends in the graph and
     compare the size measurements of penguins and what island they live
-    on
+    on.
 
 ## Results
 
@@ -100,7 +102,10 @@ between bill depth and bill length within the three islands.
 
 ``` r
 length_and_depth <- ggplot(data = penguins) +
-  geom_point(mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = island))
+  geom_point(mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = island)) +
+  labs(title = "Relationship Between Bill Length and Bill Depth on Islands",
+       x = "Bill Length (mm)",
+       y = "Bill Depth (mm)")
 length_and_depth
 ```
 
@@ -134,7 +139,10 @@ body mass of the penguins and what island they lived on.
 
 ``` r
 flipper_and_mass <- ggplot(data = penguins) +
-  geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g, color = island))
+  geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g, color = island)) +
+  labs(title = "Relationship Between Flipper Length and Body Mass on Islands",
+     x = "Bill Length (mm)",
+     y = "Body Mass (g)")
 flipper_and_mass
 ```
 
@@ -168,7 +176,7 @@ boxplot, which showed that the island of Biscoe had penguins with the
 longest flipper length.
 
 ``` r
-flipper_boxplot <- ggplot(penguins, aes(x=island, y=flipper_length_mm, color = island)) +
+flipper_boxplot <- ggplot(penguins, aes(x=island, y=flipper_length_mm, fill=island)) + 
   geom_boxplot(notch=FALSE, outlier.colour="cadetblue3", outlier.shape=8,
                outlier.size=4)
 flipper_boxplot
