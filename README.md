@@ -1,51 +1,14 @@
-Relationship Between Size Measurements of Penguins and the Island That
-They Live On
-================
+
+<img src="https://www2.mnstate.edu/uploadedImages/Content/Marketing/logos/MSUM_Signature_Vert_Color.jpg" alt="MSUM logo" width="200" style="float:right">
+
+# Comparing Size Measurements of Penguins to What Island They Live On
+
 Amara Miller
-2021-03-30
 
-## Install Packages and Read Data
+Instructor: Chris Merkord
 
-``` r
-library(tidyverse)
-```
-
-    ## -- Attaching packages --------------------------------------- tidyverse 1.3.0 --
-
-    ## v ggplot2 3.3.3     v purrr   0.3.4
-    ## v tibble  3.0.4     v dplyr   1.0.2
-    ## v tidyr   1.1.2     v stringr 1.4.0
-    ## v readr   1.4.0     v forcats 0.5.0
-
-    ## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-    ## x dplyr::filter() masks stats::filter()
-    ## x dplyr::lag()    masks stats::lag()
-
-``` r
-library(palmerpenguins)
-```
-
-    ## Warning: package 'palmerpenguins' was built under R version 4.0.4
-
-``` r
-penguins_data <- penguins
-penguins_data
-```
-
-    ## # A tibble: 344 x 8
-    ##    species island bill_length_mm bill_depth_mm flipper_length_~ body_mass_g
-    ##    <fct>   <fct>           <dbl>         <dbl>            <int>       <int>
-    ##  1 Adelie  Torge~           39.1          18.7              181        3750
-    ##  2 Adelie  Torge~           39.5          17.4              186        3800
-    ##  3 Adelie  Torge~           40.3          18                195        3250
-    ##  4 Adelie  Torge~           NA            NA                 NA          NA
-    ##  5 Adelie  Torge~           36.7          19.3              193        3450
-    ##  6 Adelie  Torge~           39.3          20.6              190        3650
-    ##  7 Adelie  Torge~           38.9          17.8              181        3625
-    ##  8 Adelie  Torge~           39.2          19.6              195        4675
-    ##  9 Adelie  Torge~           34.1          18.1              193        3475
-    ## 10 Adelie  Torge~           42            20.2              190        4250
-    ## # ... with 334 more rows, and 2 more variables: sex <fct>, year <int>
+Biosciences Department, Minnesota State University Moorhead, 1104 7th
+Avenue South, Moorhead, MN 56563 USA
 
 ## Abstract
 
@@ -66,6 +29,31 @@ what islands the penguins are located on to see if there is a
 correlation.
 
 ## Introduction
+
+There is a wide range of research that is being studied at the Palmer
+Long-Term Ecological Research study area. It is one of three research
+stations located in Antartica, so that means their main focus is on the
+marine ecosystem, which includes research on penguins. Three different
+species of penguin were researched like the Adelie, Gentoo, and the
+Chinstrap penguins.
+
+<img src="http://d3i3l3kraiqpym.cloudfront.net/wp-content/uploads/2016/04/26094914/Ad%C3%A9lie-Chinstrap-and-gentoo-penguin-species.jpg" width="400">
+
+The research also took place on three unique islands which are the
+Biscoe, Dream, and Torgersen islands.
+
+<img src="https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0090081.g001&type=large" width="400">
+
+Each penguin species is going to adapt to its own unique environment on
+a specific island. The objective is trying to figure out if there is
+going to be a relationship between the size measurements of the penguin
+and the island that it lives on. It would be interesting to see if the
+size measurements of the penguins have any natural trend when they are
+compared to what island they live on. If there are major trends, it
+could be caused for a number of different reasons. One reason could
+depend on what species of penguin might live on that island and how
+large each of these species are, so that could cause an overall trend in
+the data.
 
 ## Methods
 
@@ -89,120 +77,109 @@ correlation.
     2020).
   - A few graphs were then created for visual aid to look closer and to
     compare the data from the penguins.
-  - Five graphs were created, including four scatterplots and one
-    boxplot using the ggplot2 package in RStudio (H. Wickham, 2016).
+  - Many different graphs were then created, including four scatterplots
+    and four boxplots using the ggplot2 package in RStudio (H. Wickham,
+    2016).
   - From there it is simple to visualize some trends in the graph and
     compare the size measurements of penguins and what island they live
     on.
 
 ## Results
 
-I first created a scatterplot in which I am seeing if there is a trend
-between bill depth and bill length within the three islands.
-
-``` r
-length_and_depth <- ggplot(data = penguins) +
-  geom_point(mapping = aes(x = bill_length_mm, y = bill_depth_mm, color = island)) +
-  labs(title = "Relationship Between Bill Length and Bill Depth on Islands",
-       x = "Bill Length (mm)",
-       y = "Bill Depth (mm)")
-length_and_depth
-```
-
-    ## Warning: Removed 2 rows containing missing values (geom_point).
+I first created many different boxplots to compare each size measurement
+to what island the penguins lived on. I wanted to compare just one
+numerical variable of flipper length of the penguins to what island that
+they lived on, so I created a boxplot, which showed that the island of
+Biscoe had penguins with the longest flipper length.
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
-I next added best fit lines to get a better view of what the trend
-actually is in each island.
-
-``` r
-length_and_depthline <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = island)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE) +
-  labs(title = "Relationship Between Size Measurements and Island",
-       x = "Bill Length (mm)",
-       y = "Bill Depth (mm)")
-length_and_depthline
-```
-
-    ## `geom_smooth()` using formula 'y ~ x'
-
-    ## Warning: Removed 2 rows containing non-finite values (stat_smooth).
-
-    ## Warning: Removed 2 rows containing missing values (geom_point).
+The next comparison is the bill length of the penguin to what island it
+lives on.
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
-For another comparison, I looked at the trend between flipper length and
-body mass of the penguins and what island they lived on.
-
-``` r
-flipper_and_mass <- ggplot(data = penguins) +
-  geom_point(mapping = aes(x = flipper_length_mm, y = body_mass_g, color = island)) +
-  labs(title = "Relationship Between Flipper Length and Body Mass on Islands",
-     x = "Bill Length (mm)",
-     y = "Body Mass (g)")
-flipper_and_mass
-```
-
-    ## Warning: Removed 2 rows containing missing values (geom_point).
+Another measurement that I compared to what island the penguin lived on
+was the depth of the bill.
 
 ![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-I again added best fit lines to this graph also.
-
-``` r
-flipper_and_massline <- ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, color = island)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE) +
-  labs(title = "Relationship Between Size Measurements and Island",
-       x = "Flipper Length (mm)",
-       y = "Body Mass (g)")
-flipper_and_massline
-```
-
-    ## `geom_smooth()` using formula 'y ~ x'
-
-    ## Warning: Removed 2 rows containing non-finite values (stat_smooth).
-
-    ## Warning: Removed 2 rows containing missing values (geom_point).
+The final comparison is the body mass of each penguin compared to the
+island that they live on.
 
 ![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-I also wanted to compare just one numerical variable of flipper length
-of the penguins to what island that they lived on, so I created a
-boxplot, which showed that the island of Biscoe had penguins with the
-longest flipper length.
-
-``` r
-flipper_boxplot <- ggplot(penguins, aes(x=island, y=flipper_length_mm, fill=island)) + 
-  geom_boxplot(notch=FALSE, outlier.colour="cadetblue3", outlier.shape=8,
-               outlier.size=4)
-flipper_boxplot
-```
-
-    ## Warning: Removed 2 rows containing non-finite values (stat_boxplot).
-
+I then created a scatterplot in which I am seeing if there is a trend
+between bill depth and bill length within the three islands.
 ![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+I next added best fit lines to get a better view of what the trend
+actually is in each island.
+![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+I couldn’t really see a natural trend from that graph from any of the
+size measurements, so I decided to go another route and see if there was
+a trend with flipper length and body mass compared to the island.
+
+![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+I could kind of tell that there was a little bit of a trend, but to get
+a better look I made the graph have best fit lines.
+
+![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+From there I wanted to create a graph to represent what species of
+penguin was on each island to determine the trends I was seeing.
+
+![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ## Discussion
 
-## Literature Cited
+After all of the results were found, it was kind of challenging to
+really compare the size measurements of penguins to what island they
+live on. There is not much research out there that digs deep into this
+concept, whether there is a trend in the data or there isn’t. Some
+things that were discovered in this data had to do with the island of
+Biscoe. After creating those four boxplots, it was easy to notice that
+Biscoe had penguins with the largest flipper length and it had penguins
+with the largest body mass. From there, another graph was created to see
+if there was some sort of correlation. After making the scatterplot with
+the flipper length on the x-axis and the body mass on the y-axis, there
+seemed to be a visual trend going on with the island of Biscoe. With the
+best fit lines, the island of Biscoe had a positive slope, which showed
+that there was a positive correlation. One reason that this would happen
+would be depending on what kind of penguins might happen to live on that
+island. A graph was then made that showed how many of each species of
+penguin was located on each island. This graph showed that the island of
+Biscoe mainly had the Gentoo penguin. The positive correlation with
+flipper length and body mass made sense, because the Gentoo species is
+the largest of the three species. Also from that same graph, it is
+noticable that the species of penguins aren’t spread out that much, so
+that is another reason why it was kind of difficult to notice more
+trends throughout the data. Some more results I got showed how the
+island of Torgersen had the largest bill depth and how the island of
+Dream had the longest bill length. Overall, it is was easy to notice one
+major trend throughout the data and some other small results shown
+through other graphs like scatterplots and boxplots. These results show
+how it is important to get a wide spread of data in order to be able to
+see more prominant trends.
 
-Hadley Wickham and Jim Hester (2020). readr: Read Rectangular Text Data.
-R package version 1.4.0. <https://CRAN.R-project.org/package=readr>
+## References
 
-Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020).
-dplyr: A Grammar of Data Manipulation. R package version 1.0.2.
-<https://CRAN.R-project.org/package=dplyr>
+  - Hadley Wickham and Jim Hester (2020). readr: Read Rectangular Text
+    Data. R package version 1.4.0.
+    <https://CRAN.R-project.org/package=readr>
 
-Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago
-(Antarctica) penguin data. R package version 0.1.0.
-<https://allisonhorst.github.io/palmerpenguins/>
+  - Hadley Wickham, Romain François, Lionel Henry and Kirill Müller
+    (2020). dplyr: A Grammar of Data Manipulation. R package version
+    1.0.2. <https://CRAN.R-project.org/package=dplyr>
 
-H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
-New York, 2016.
+  - Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer
+    Archipelago (Antarctica) penguin data. R package version 0.1.0.
+    <https://allisonhorst.github.io/palmerpenguins/>
 
-RStudio Team (2020). RStudio: Integrated Development Environment for R.
-RStudio, PBC, Boston, MA URL <http://www.rstudio.com/>.
+  - H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
+    Springer-Verlag New York, 2016.
+
+  - RStudio Team (2020). RStudio: Integrated Development Environment for
+    R. RStudio, PBC, Boston, MA URL <http://www.rstudio.com/>.
